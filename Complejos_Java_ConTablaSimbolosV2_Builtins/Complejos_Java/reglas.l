@@ -31,7 +31,7 @@ comma       = ,
 {var} {
   yyparser.yylval = new ParserVal(new Cadena(yytext())); 
   return Parser.VAR;
-}
+  }
 {complexnum} { Auxiliar a = new Auxiliar(); 
                int [] cmp = a.obtenerComponentes(yytext());
                yyparser.yylval = new ParserVal( new Complejo(cmp[0], cmp[1]) );

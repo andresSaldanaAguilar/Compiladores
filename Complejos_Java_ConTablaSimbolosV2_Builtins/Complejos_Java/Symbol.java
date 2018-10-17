@@ -2,10 +2,6 @@ public class Symbol {
   String name;
   short type;
   Complejo data;
-  //
-  public String metodo;
-  int defn;
-  Symbol next;
 
   public Symbol(String name, short type, Complejo data) {
     this.name = name;
@@ -18,7 +14,4 @@ public class Symbol {
   public Complejo getData() {return data;}
 
   public void setData(Complejo data) {this.data = data;}
-
-  public Symbol obtenSig(){ return next; }
-  public void ponSig(Symbol s){ next=s; }
 }

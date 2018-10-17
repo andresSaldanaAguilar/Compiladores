@@ -15,14 +15,16 @@
 %%
 list:	/* nada */
 			| list '\n'
-      | list asgn '\n' {maq.code("pop");maq.code("STOP");return 1;}
-			| list exp '\n' {maq.code("print");maq.code("STOP");return 1;}
+      | list asgn '\n' {}
+			| list exp '\n' {Complejo res = (Complejo) $2.obj; res.imprimeComplejo();}
 			;
-asgn: VAR '=' exp   {
-        $$=$3; maq.code("varpush"); 
-        maq.code(((Algo)$1.obj).simb); 
-        maq.code("assign");
-      }
+asgn: VAR '=' exp   { Cadena c = (Cadena) $1.obj;
+                      Symbol s = lookUpTable(c.getCadena());
+                      if (s == null)
+                        install(c.getCadena(), (Complejo) $3.obj, (short) 1);
+                      else
+                        update(s, (Complejo) $3.obj);
+                    }
       ;
 exp:  CNUMBER       {Complejo c = (Complejo) $1.obj;}
       | VAR         { Cadena c      = (Cadena) $1.obj;
@@ -87,30 +89,8 @@ exp:  CNUMBER       {Complejo c = (Complejo) $1.obj;}
 %%
 
 /** CÓDIGO DE SOPORTE **/
-
-  boolean indef;
-  static Tabla tabla;
-  static Maquina maq;
-
-  static String ins;
-  static StringTokenizer st;
-  static boolean newline;
-  Functions f = new Functions();
-
-  class Algo {
-    Simbolo simb;
-    int inst;
-
-    public Algo(int i){
-      inst=i;
-    }
-    public Algo(Simbolo s, int i){
-      simb=s;
-      inst=i;
-    }
-  }
-
   private Yylex lexer;
+  Functions f     = new Functions();
 
   private int yylex () {
     int yyl_return = -1;
@@ -124,41 +104,60 @@ exp:  CNUMBER       {Complejo c = (Complejo) $1.obj;}
     return yyl_return;
   }
 
+
+  public void yyerror (String error) {
+    System.err.println ("Error: " + error);
+  }
+
+
   public Parser(Reader r) {
     lexer = new Yylex(r, this);
   }
 
-  void yyerror(String s){
-  System.out.println("parser:"+s);
+/* Metodos de la tabla de símbolos */
+ArrayList<Symbol> symbolTable = new ArrayList<>();
+
+Symbol lookUpTable(String symbolName) {
+  for (Symbol s: symbolTable) {
+    if (s.getName().compareTo(symbolName) == 0) { // The symbol is already in the table !
+      return s;
+    }
   }
+  return null;
+}
+
+void install(String name, Complejo data, short type) {
+  Symbol s = new Symbol(name, type, data);
+  symbolTable.add(s);
+}
+
+void update(Symbol s, Complejo data) {
+  Symbol newSymbol = s;
+  symbolTable.remove(s);
+  newSymbol.setData(data);
+  symbolTable.add(newSymbol);
+}
+
+/* Método para la inicializacion de las funciones disponibles */
+void init() {
+  /* Se inicializan las funciones */
+  String[] funcNames = {"exp", "sin", "cos", "pow"};
+  for (int i = 0; i < funcNames.length; i++) {
+    install(funcNames[i], null, (short) 2);
+  }
+}
 
   public static void main(String args[]) throws IOException {
     System.out.println("Calculadora Números Complejos Cientifica");
 
-    BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    Maquina maq = new Maquina();
+    Parser yyparser;
 
-    Tabla tabla = new Tabla();
-    //tabla.install("sin",BLTIN,0,0);
+    System.out.print("Ingresa una expresion: ");
 
-    String[] funcNames = {"exp", "sin", "cos", "pow"};
-    for (int i = 0; i < funcNames.length; i++) {
-      tabla.install(funcNames[i], null, (short) 2);
-    }
+	  yyparser = new Parser(new InputStreamReader(System.in));
 
-    Parser par = new Parser(false);
-      try{
-         ins = in.readLine();
-      } catch (Exception e){}
-      st = new StringTokenizer(ins);
-      newline=false;
-      for(maq.initcode(); par.yyparse ()!=0; maq.initcode()){
-      maq.execute(maq.progbase);
-      try{
-         ins = in.readLine();
-      } catch (Exception e){}
-      st = new StringTokenizer(ins);  
-      newline=false;
-    }	
+    yyparser.init();
+
+    yyparser.yyparse();
 
   }
