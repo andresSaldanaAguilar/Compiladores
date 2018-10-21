@@ -18,8 +18,7 @@
 
 //#line 2 "complejos.y"
   import java.io.*;
-  import java.util.ArrayList;
-//#line 20 "Parser.java"
+//#line 19 "Parser.java"
 
 
 
@@ -167,46 +166,46 @@ final static short yylhs[] = {                           -1,
     2,    2,    2,    2,    2,
 };
 final static short yylen[] = {                            2,
-    0,    2,    3,    3,    3,    1,    1,    1,    6,    4,
+    0,    2,    3,    3,    3,    1,    1,    1,    4,    3,
     3,    3,    3,    3,    3,
 };
 final static short yydefred[] = {                         1,
     0,    0,    6,    0,    2,    0,    0,    0,    0,    0,
-    8,    0,    3,    0,    0,    0,    0,    4,    0,    0,
-   15,    0,    0,   13,   14,    0,   10,    0,    9,
+    8,    0,    3,    0,    0,    0,    0,    0,    4,    0,
+    0,   15,    0,    0,    0,    0,   14,    9,
 };
 final static short yydgoto[] = {                          1,
    11,    8,
 };
 final static short yysindex[] = {                         0,
-  -10,  -51,    0,  -24,    0,  -39,   14,   -2,  -39,  -39,
-    0,  -16,    0,  -39,  -39,  -39,  -39,    0,   16,  -38,
-    0,  -30,  -30,    0,    0, -232,    0,   -9,    0,
+  -10,  -55,    0,  -21,    0,  -39,   11,   -2,  -39,  -39,
+    0,  -38,    0,  -39,  -39,  -39,  -39, -235,    0,  -25,
+  -31,    0,  -15,  -15,  -63,  -63,    0,    0,
 };
 final static short yyrindex[] = {                         0,
-    0,   -8,    0,    0,    0,    0,   22,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,   13,    0,
-    0,    3,    8,    0,    0,    0,    0,    0,    0,
+    0,   -8,    0,    0,    0,    0,  -19,    0,    0,    0,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,    3,
+    0,    0,   39,   44,    5,   19,    0,    0,
 };
 final static short yygindex[] = {                         0,
-   37,    5,
+   35,   84,
 };
 final static int YYTABLESIZE=249;
 static short yytable[];
 static { yytable();}
 static void yytable(){
 yytable = new short[]{                          5,
-    6,    7,   27,   16,   15,   26,   14,   18,   17,    9,
-   12,   16,   12,   19,   20,   10,   17,   11,   22,   23,
-   24,   25,    5,   13,   21,   16,   15,   28,   14,    6,
-   17,   29,    7,    7,    7,    7,    7,    7,    7,   16,
-   15,    0,   14,   12,   17,   12,   12,   12,   11,    0,
-   11,   11,   11,    5,    0,    0,    5,   16,   15,    0,
-   14,    0,   17,    8,    8,    0,    8,    0,    8,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+    6,    7,   22,   16,   15,    9,   14,   19,   17,   28,
+   16,   15,    5,   14,   12,   17,   16,   15,   10,   14,
+   13,   17,    8,    8,   27,    8,   16,    8,   13,    6,
+   18,   17,    7,    7,    7,    7,    7,    0,    7,   16,
+   15,    0,   14,    5,   17,   12,   12,   12,   11,   12,
+    0,   12,    0,   10,    0,   18,    0,    0,    0,   13,
+   13,   13,   18,   13,    0,   13,    0,    0,   18,    0,
+    0,    0,    0,    0,    8,    0,    0,    0,   18,   11,
+    0,   11,    0,   11,   10,    7,   10,    0,   10,   12,
+    0,   18,   20,   21,    0,    0,    0,   23,   24,   25,
+   26,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
@@ -227,17 +226,17 @@ static short yycheck[];
 static { yycheck(); }
 static void yycheck() {
 yycheck = new short[] {                         10,
-   40,   10,   41,   42,   43,   44,   45,   10,   47,   61,
-    6,   42,   10,    9,   10,   40,   47,   10,   14,   15,
-   16,   17,   10,   10,   41,   42,   43,  260,   45,   40,
-   47,   41,   41,   42,   43,   44,   45,    1,   47,   42,
-   43,   -1,   45,   41,   47,   43,   44,   45,   41,   -1,
-   43,   44,   45,   41,   -1,   -1,   44,   42,   43,   -1,
-   45,   -1,   47,   42,   43,   -1,   45,   -1,   47,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
+   40,   10,   41,   42,   43,   61,   45,   10,   47,   41,
+   42,   43,   10,   45,   10,   47,   42,   43,   40,   45,
+   10,   47,   42,   43,  260,   45,   42,   47,   10,   40,
+   94,   47,   41,   42,   43,    1,   45,   -1,   47,   42,
+   43,   -1,   45,   41,   47,   41,   42,   43,   10,   45,
+   -1,   47,   -1,   10,   -1,   94,   -1,   -1,   -1,   41,
+   42,   43,   94,   45,   -1,   47,   -1,   -1,   94,   -1,
+   -1,   -1,   -1,   -1,   94,   -1,   -1,   -1,   94,   41,
+   -1,   43,   -1,   45,   41,   94,   43,   -1,   45,    6,
+   -1,   94,    9,   10,   -1,   -1,   -1,   14,   15,   16,
+   17,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
@@ -260,9 +259,10 @@ final static String yyname[] = {
 "end-of-file",null,null,null,null,null,null,null,null,null,"'\\n'",null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,"'('","')'","'*'","'+'",
-"','","'-'",null,"'/'",null,null,null,null,null,null,null,null,null,null,null,
+null,"'-'",null,"'/'",null,null,null,null,null,null,null,null,null,null,null,
 null,null,"'='",null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
+null,null,null,null,"'^'",null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
@@ -272,8 +272,7 @@ null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
 null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
-null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,
-null,null,null,null,null,null,null,"VAR","CNUMBER","BLTIN","DIG",
+null,null,null,null,null,null,null,null,"VAR","CNUMBER","BLTIN","DIG",
 };
 final static String yyrule[] = {
 "$accept : list",
@@ -285,31 +284,30 @@ final static String yyrule[] = {
 "exp : CNUMBER",
 "exp : VAR",
 "exp : asgn",
-"exp : BLTIN '(' exp ',' DIG ')'",
 "exp : BLTIN '(' exp ')'",
 "exp : exp '+' exp",
 "exp : exp '-' exp",
 "exp : exp '*' exp",
 "exp : exp '/' exp",
+"exp : exp '^' DIG",
 "exp : '(' exp ')'",
 };
 
-//#line 90 "complejos.y"
+//#line 60 "complejos.y"
 
-/** CÓDIGO DE SOPORTE **/
+  static Maquina maq = new Maquina();
   private Yylex lexer;
-  Functions f     = new Functions();
-
 
   private int yylex () {
     int yyl_return = -1;
     try {
-      yylval = new ParserVal(0);
+      yylval = new ParserVal(0);      
       yyl_return = lexer.yylex();
     }
     catch (IOException e) {
       System.err.println("IO error :"+e);
-    }
+    }  
+
     return yyl_return;
   }
 
@@ -322,55 +320,24 @@ final static String yyrule[] = {
   public Parser(Reader r) {
     lexer = new Yylex(r, this);
   }
-
-/* Metodos de la tabla de símbolos */
-ArrayList<Symbol> symbolTable = new ArrayList<>();
-
-Symbol lookUpTable(String symbolName) {
-  for (Symbol s: symbolTable) {
-    if (s.getName().compareTo(symbolName) == 0) { // The symbol is already in the table !
-      return s;
-    }
-  }
-  return null;
-}
-
-void install(String name, Complejo data, short type) {
-  Symbol s = new Symbol(name, type, data);
-  symbolTable.add(s);
-}
-
-void update(Symbol s, Complejo data) {
-  Symbol newSymbol = s;
-  symbolTable.remove(s);
-  newSymbol.setData(data);
-  symbolTable.add(newSymbol);
-}
-
-/* Método para la inicializacion de las funciones disponibles */
-void init() {
-  /* Se inicializan las funciones */
-  String[] funcNames = {"exp", "sin", "cos", "pow"};
-  for (int i = 0; i < funcNames.length; i++) {
-    install(funcNames[i], null, (short) 2);
-  }
-}
-
-  public static void main(String args[]) throws IOException {
-    System.out.println("Calculadora Números Complejos Cientifica");
+  
+  boolean flag = false;
+  
+  public static void main(String args[]) throws IOException {    
+    System.out.println(".:: Complex Number Calculator ::.");
 
     Parser yyparser;
+    
+    System.out.print("Expression: ");
+    
+	  yyparser = new Parser(new InputStreamReader(System.in));    
 
-    System.out.print("Ingresa una expresion: ");
-
-	  yyparser = new Parser(new InputStreamReader(System.in));
-
-    yyparser.init();
+    maq.initcode();
 
     yyparser.yyparse();
 
   }
-//#line 302 "Parser.java"
+//#line 269 "Parser.java"
 //###############################################################
 // method: yylexdebug : check lexer state
 //###############################################################
@@ -526,108 +493,78 @@ boolean doaction;
 //########## USER-SUPPLIED ACTIONS ##########
 case 3:
 //#line 18 "complejos.y"
-{}
+{ maq.code("STOP"); 
+                        maq.execute(flag); 
+                        flag = true;
+                      }
 break;
 case 4:
-//#line 19 "complejos.y"
-{Complejo res = (Complejo) val_peek(1).obj; res.imprimeComplejo();}
+//#line 22 "complejos.y"
+{ maq.code("imprimeComplejo");
+                        maq.code("STOP");
+                        maq.execute(flag); 
+                        flag = true;
+                      }
 break;
 case 5:
-//#line 21 "complejos.y"
-{ Cadena c = (Cadena) val_peek(2).obj;
-                      Symbol s = lookUpTable(c.getCadena());
-                      if (s == null)
-                        install(c.getCadena(), (Complejo) val_peek(0).obj, (short) 1);
-                      else
-                        update(s, (Complejo) val_peek(0).obj);
+//#line 28 "complejos.y"
+{ Cadena c = (Cadena)val_peek(2).obj;
+                      maq.code("varpush");
+                      maq.code(c);
+                      maq.code("setvar");
                     }
 break;
 case 6:
-//#line 29 "complejos.y"
-{Complejo c = (Complejo) val_peek(0).obj;}
+//#line 34 "complejos.y"
+{ Complejo c = (Complejo)val_peek(0).obj;
+                maq.code("cnumber"); /*guardamos cadena en RAM*/
+                maq.code(c); /*guardamos variable en RAM*/
+              }
 break;
 case 7:
-//#line 30 "complejos.y"
-{ Cadena c      = (Cadena) val_peek(0).obj;
-                      Symbol s      = lookUpTable(c.getCadena());
-                      if (s != null) {
-                        Complejo data = (Complejo) s.getData();
-                        yyval = new ParserVal(data);
-                      } else {
-                        yyerror("Variable no declarada");
-                        System.exit(0);
-                      }
-                    }
+//#line 38 "complejos.y"
+{ Cadena c = (Cadena)val_peek(0).obj;
+                maq.code("varpush");
+                maq.code(c);
+                maq.code("getvar"); /*conseguimos el valor de la variable para imprimirlo*/
+              }
 break;
 case 9:
-//#line 41 "complejos.y"
-{ Cadena c1       = (Cadena) val_peek(5).obj;
-                                    Symbol s        = lookUpTable(c1.getCadena());
-                                    String fName    = s.getName();
-                                    Complejo res    = new Complejo(0, 0);
-                                    Cadena powN     = (Cadena) val_peek(1).obj;
-
-                                    if (fName.compareTo("pow") == 0) {
-                                      res = f.pow((Complejo) val_peek(3).obj, powN);
-                                    }
-                                    yyval = new ParserVal(res);
-
-                                  }
+//#line 44 "complejos.y"
+{ Cadena c = (Cadena)val_peek(3).obj; 
+                        maq.code("stringpush");
+                        maq.code(c);
+                        maq.code("bltin");
+                      }
 break;
 case 10:
-//#line 53 "complejos.y"
-{ Cadena c        = (Cadena) val_peek(3).obj;
-                                    Symbol s        = lookUpTable(c.getCadena());
-                                    String fName    = s.getName();
-                                    Complejo res    = new Complejo(0, 0);
-
-                                    if (fName.compareTo("exp") == 0) {
-                                      res = f.exp((Complejo) val_peek(1).obj);
-                                    } else if (fName.compareTo("sin") == 0) {
-                                      res = f.sinus((Complejo) val_peek(1).obj);
-                                    } else if (fName.compareTo("cos") == 0) {
-                                      res = f.cosine((Complejo) val_peek(1).obj);
-                                    }
-                                    yyval = new ParserVal(res);
-                                  }
+//#line 49 "complejos.y"
+{maq.code("add");}
 break;
 case 11:
-//#line 67 "complejos.y"
-{ Complejo c1   = (Complejo) val_peek(2).obj; Complejo c2 = (Complejo) val_peek(0).obj;
-                                    Complejo res  = new Complejo(0,0);
-                                    res.sumaComplejos(c1, c2);
-                                    yyval            = new ParserVal(res);
-                                  }
+//#line 50 "complejos.y"
+{maq.code("sub");}
 break;
 case 12:
-//#line 72 "complejos.y"
-{ Complejo c1   = (Complejo) val_peek(2).obj; Complejo c2 = (Complejo) val_peek(0).obj;
-                                    Complejo res  = new Complejo(0,0);
-                                    res.restaComplejos(c1, c2);
-                                    yyval            = new ParserVal(res);
-                                  }
+//#line 51 "complejos.y"
+{maq.code("mul");}
 break;
 case 13:
-//#line 77 "complejos.y"
-{ Complejo c1   = (Complejo) val_peek(2).obj; Complejo c2 = (Complejo) val_peek(0).obj;
-                                    Complejo res  = new Complejo(0,0);
-                                    res.multiplicaComplejos(c1, c2);
-                                    yyval            = new ParserVal(res);
-                                  }
+//#line 52 "complejos.y"
+{maq.code("div");}
 break;
 case 14:
-//#line 82 "complejos.y"
-{ Complejo c1   = (Complejo) val_peek(2).obj; Complejo c2 = (Complejo) val_peek(0).obj;
-                                    Complejo res  = new Complejo(0,0);
-                                    res.divideComplejos(c1, c2);
-                                    yyval            = new ParserVal(res);
-                                  }
+//#line 53 "complejos.y"
+{maq.code("stringpush");
+                  maq.code((Cadena)val_peek(1).obj);
+                  maq.code("pow");
+                 }
 break;
 case 15:
-//#line 87 "complejos.y"
-{Complejo c = (Complejo) val_peek(1).obj; yyval = new ParserVal(c); }
+//#line 57 "complejos.y"
+{ yyval= val_peek(1);}
 break;
-//#line 554 "Parser.java"
+//#line 491 "Parser.java"
 //########## END OF USER-SUPPLIED ACTIONS ##########
     }//switch
     //#### Now let's reduce... ####

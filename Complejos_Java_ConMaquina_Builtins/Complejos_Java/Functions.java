@@ -1,5 +1,5 @@
 public class Functions {
-  public Complejo sinus(Complejo c) {
+  public Complejo sin(Complejo c) {
     float a = c.getReal(); float b = c.getImg();
 
     float real  = (float) (Math.sin(a) * (float) ((Math.exp(b) + Math.exp(-b)) / 2));
@@ -9,7 +9,7 @@ public class Functions {
     return res;
   }
 
-  public Complejo cosine(Complejo c) {
+  public Complejo cos(Complejo c) {
     float a = c.getReal(); float b = c.getImg();
 
     float real  = (float) (Math.cos(a) * (float) ((Math.exp(b) + Math.exp(-b)) / 2));
