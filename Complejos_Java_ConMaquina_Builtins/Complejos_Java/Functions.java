@@ -30,8 +30,8 @@ public class Functions {
     return res;
   }
 
-  public Complejo pow(Complejo c, Cadena powN) {
-    int number = Integer.parseInt(powN.getCadena());
+  public Complejo pow(Complejo c, Complejo powN) {
+    int number = (int)powN.getReal();
     Complejo res = c;
     for (int i = 1; i < number; i++) {
       res = multiplicaComplejos(res, c);    

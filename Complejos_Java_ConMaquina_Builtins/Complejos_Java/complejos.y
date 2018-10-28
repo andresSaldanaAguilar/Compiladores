@@ -50,10 +50,7 @@ exp: CNUMBER  { Complejo c = (Complejo)$1.obj;
    | exp '-' exp {maq.code("sub");}
    | exp '*' exp {maq.code("mul");}
    | exp '/' exp {maq.code("div");}
-   | exp '^' DIG {maq.code("stringpush");
-                  maq.code((Cadena)$2.obj);
-                  maq.code("pow");
-                 }
+   | exp '^' exp {maq.code("pow");}
    | '(' exp ')'  { $$= $2;}
    ;
 %%

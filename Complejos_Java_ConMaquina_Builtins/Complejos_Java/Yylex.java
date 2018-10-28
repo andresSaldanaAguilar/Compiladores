@@ -47,9 +47,9 @@ class Yylex {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\2\2\1\1\2\3\1\4\1\2\4\4"+
-    "\1\5\6\0\1\4\1\0\4\4\2\0\1\6\2\0"+
-    "\1\7";
+    "\1\0\1\1\2\2\1\3\2\4\1\5\1\2\4\5"+
+    "\1\6\6\0\1\5\1\0\4\5\2\0\1\7\2\0"+
+    "\1\10";
 
   private static int [] zzUnpackAction() {
     int [] result = new int[32];
@@ -581,38 +581,42 @@ class Yylex {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { 
+            { System.out.println("yytext: "+yytext());return (int) yycharat(0);
             }
-          case 8: break;
+          case 9: break;
           case 2: 
             { return (int) yycharat(0);
             }
-          case 9: break;
+          case 10: break;
           case 3: 
+            { 
+            }
+          case 11: break;
+          case 4: 
             { yyparser.yylval = new ParserVal(new Cadena(yytext())); return Parser.DIG;
             }
-          case 10: break;
-          case 4: 
+          case 12: break;
+          case 5: 
             { yyparser.yylval = new ParserVal(new Cadena(yytext())); 
   return Parser.VAR;
             }
-          case 11: break;
-          case 5: 
+          case 13: break;
+          case 6: 
             { System.err.println("Error: unexpected character '"+yytext()+"'"); return -1;
             }
-          case 12: break;
-          case 6: 
+          case 14: break;
+          case 7: 
             { yyparser.yylval = new ParserVal(new Cadena(yytext()));
    return Parser.BLTIN;
             }
-          case 13: break;
-          case 7: 
+          case 15: break;
+          case 8: 
             { Auxiliar a = new Auxiliar(); 
                int [] cmp = a.obtenerComponentes(yytext());
                yyparser.yylval = new ParserVal( new Complejo(cmp[0], cmp[1]) );
                return Parser.CNUMBER;
             }
-          case 14: break;
+          case 16: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

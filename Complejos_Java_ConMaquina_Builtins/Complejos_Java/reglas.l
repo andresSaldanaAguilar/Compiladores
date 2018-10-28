@@ -41,6 +41,6 @@ comma       = ,
 {digits} { yyparser.yylval = new ParserVal(new Cadena(yytext())); return Parser.DIG;}
 {nl}   { return (int) yycharat(0); }
 {ws}   {}
-.      {}
+.      {System.out.println("yytext: "+yytext());return (int) yycharat(0);}
 /* error fallback */
 [^]    { System.err.println("Error: unexpected character '"+yytext()+"'"); return -1; }

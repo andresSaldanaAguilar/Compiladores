@@ -141,7 +141,7 @@ class Maquina{
     void sub() {
         Complejo c2 = ((Complejo)pila.pop());
         Complejo c1 = ((Complejo)pila.pop());     
-        pila.push(new Complejo(c1.getReal() - c2.getReal(),c1.getImg() + c2.getImg()));
+        pila.push(new Complejo(c1.getReal() - c2.getReal(),c1.getImg() - c2.getImg()));
     }
 
     void div() {
@@ -163,7 +163,7 @@ class Maquina{
 
     void pow(){
         Functions f = new Functions();
-        Cadena base = ((Cadena)pila.pop());
+        Complejo base = ((Complejo)pila.pop());
         Complejo c1 = ((Complejo)pila.pop()); 
         Complejo res = f.pow(c1, base);
         pila.push(res);
