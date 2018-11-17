@@ -24,6 +24,10 @@ list:	/* nada */
                         maq.execute(flag); 
                         flag = true;
                       }
+      | list stmt '\n'{ maq.code("STOP");
+                        maq.execute(flag); 
+                        flag = true;
+                      }
 			;
 asgn: VAR '=' exp   { Cadena c = (Cadena)$1.obj;
                       maq.code("varpush");
