@@ -1,0 +1,119 @@
+//ESPIRAL CON RECURSIVIDAD
+procedure r_spiral(){
+   if($1<2){
+    RETURN;
+  }
+   else{
+    FORWARD[$1*20];
+    TURN[-90];
+    r_spiral($1-1);
+   }
+}
+COLOR[0,0,0];
+TURN[180];
+r_spiral(10);
+
+
+
+//TRIANGULO
+COLOR[0,0,0];
+FORWARD[100];
+TURN[120];
+FORWARD[100];
+TURN[120];
+FORWARD[100];
+
+//ESTRELLA
+procedure estrella() {
+    contador = 0;
+    while(contador <= 5){       
+        FORWARD[100];
+        TURN[144];        
+        contador = contador + 1;
+    }
+}
+COLOR[0,0,0];
+TURN[110];
+estrella();
+
+
+// Estrella de david
+procedure triangulo() {
+  COLOR[0,0,0];
+  FORWARD[100];
+  TURN[120];
+  FORWARD[100];
+  TURN[120];
+  FORWARD[100];
+  TURN[120];
+}
+procedure estrella_david() {  
+  triangulo();
+  FORWARD[50];
+  COLOR[201, 206, 214];
+  TURN[-90];
+  FORWARD[20];
+  TURN[150];
+  triangulo();
+}
+estrella_david();
+
+
+
+/(Arbol
+procedure tree(){
+  if($1>5){
+    FORWARD[$1];
+    TURN[20];
+    tree($1-15);
+    TURN[320];
+    tree($1-15);
+    TURN[20];
+    FORWARD[(-1)*($1)];
+ }
+}
+TURN[90];
+  COLOR[201, 206, 214];
+  TURN[180];
+  FORWARD[200];
+  TURN[180];
+  COLOR[255,255,255];
+tree(100);
+
+//Figura rara
+procedure figura() {
+  corto = $1;
+  largo = $1 * 2;
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+  TURN[-90];
+  FORWARD[largo];
+  TURN[-90];
+  FORWARD[corto];
+  TURN[-90];
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+  TURN[-90];
+  FORWARD[corto];
+  TURN[-90];
+  FORWARD[largo];
+  TURN[-90];
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+  TURN[90];
+  FORWARD[corto];
+}
+for(i=0; i < 4; i = i + 1) {
+  if(i == 2) {
+    TURN[90];
+  }
+  figura(20);
+  FORWARD[50];
+}
